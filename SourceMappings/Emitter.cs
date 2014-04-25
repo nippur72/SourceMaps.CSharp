@@ -6,16 +6,43 @@ using System.Threading.Tasks;
 
 namespace TypeScript
 {
+   public enum EmitContainer 
+   {
+        Prog,
+        Module,
+        DynamicModule,
+        Class,
+        Constructor,
+        Function,
+        Args,
+        Interface,
+    }
+
+   public class EmitState 
+   {
+        public int column;
+        public int line;
+        public EmitContainer container;
+
+        public EmitState() 
+        {
+            this.column = 0;
+            this.line = 0;
+            this.container = EmitContainer.Prog;
+        }
+    }
+
    public struct LineCol
    {
       public int line; 
       public int character;
    }
 
-   public class Emitter
+  public class Emitter
    {
       public SourceMapper sourceMapper = null;
       public EmitOptions emitOptions;
+      public EmitState emitState = new EmitState();
 
       public void createSourceMapper(Document document, string jsFileName, TextWriter jsFile, TextWriter sourceMapOut, Func<string,string> resolvePath) 
       {
