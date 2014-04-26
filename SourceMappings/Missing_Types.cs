@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace TypeScript
 {
-    public class ISyntaxElement : ISpan
-    {
-    }
+   public class ISyntaxElement : ISpan
+   {
+      public int start()
+      {
+         throw new NotImplementedException();
+      }
+      
+      public int end()
+      {
+         throw new NotImplementedException();
+      }      
+   }
 
     public class ASTHelpers
     {
@@ -51,11 +60,20 @@ namespace TypeScript
 
     public class Document
     {
+      public dynamic lineMap()
+      {
+         throw new NotImplementedException();
+      }
     }
 
     public class OutputFile
     {
        public List<SourceMapEntry> sourceMapEntries;
+
+       public OutputFile getOutputFile()
+       {
+          throw new NotImplementedException();
+       }
     }
 
     public class JSON

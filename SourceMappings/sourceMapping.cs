@@ -1,3 +1,4 @@
+
 //
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 // 
@@ -238,7 +239,8 @@ namespace TypeScript
             var emitComma = false;
 
             SourceMapPosition recordedPosition = null;
-            for (var sourceIndex = 0; sourceIndex < this.tsFilePaths.Count; sourceIndex++) {
+            for (var sourceIndex = 0; sourceIndex < this.tsFilePaths.Count; sourceIndex++) 
+            {
                 Action<SourceMapPosition, int> recordSourceMapping = (SourceMapPosition mappedPosition, int nameIndex) => {
 
                     if (recordedPosition != null &&
@@ -297,7 +299,9 @@ namespace TypeScript
                 };
 
                 // Record starting spans
-                Action<List<SourceMapping>> recordSourceMappingSiblings = (List<SourceMapping> sourceMappings) => {
+                Action<List<SourceMapping>> recordSourceMappingSiblings = null;
+
+                recordSourceMappingSiblings = (List<SourceMapping> sourceMappings) => {
                     for (var i = 0; i < sourceMappings.Count; i++) {
                         var sourceMapping = sourceMappings[i];
                         recordSourceMapping(sourceMapping.start, sourceMapping.nameIndex);

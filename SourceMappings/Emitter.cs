@@ -43,6 +43,9 @@ namespace TypeScript
       public SourceMapper sourceMapper = null;
       public EmitOptions emitOptions;
       public EmitState emitState = new EmitState();
+      public OutputFile outfile;
+
+      public Document document;
 
       public void createSourceMapper(Document document, string jsFileName, TextWriter jsFile, TextWriter sourceMapOut, Func<string,string> resolvePath) 
       {
