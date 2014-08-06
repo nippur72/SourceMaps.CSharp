@@ -1,9 +1,37 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceMappings", "SourceMappings\SourceMappings.csproj", "{2CBA77E5-818E-4A59-87A7-BC39FB4DEFB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceMaps.Dart", "SourceMaps.Dart\SourceMaps.Dart.csproj", "{8B689BCB-B717-49A6-A273-606666CDF641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestExample", "TestExample\TestExample.csproj", "{3FF3DCD9-C135-4EA2-A055-D080177744E2}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Website(4)", "http://localhost:3146", "{62B0C21A-AC26-4B30-975C-A5720091A6F4}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3146"
+		Debug.AspNetCompiler.PhysicalPath = "Website\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3146\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3146"
+		Release.AspNetCompiler.PhysicalPath = "Website\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3146\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Website\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{40B0DC22-9F01-45CA-8963-043C0E9CE3DE}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +39,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2CBA77E5-818E-4A59-87A7-BC39FB4DEFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CBA77E5-818E-4A59-87A7-BC39FB4DEFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CBA77E5-818E-4A59-87A7-BC39FB4DEFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CBA77E5-818E-4A59-87A7-BC39FB4DEFB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B689BCB-B717-49A6-A273-606666CDF641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B689BCB-B717-49A6-A273-606666CDF641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B689BCB-B717-49A6-A273-606666CDF641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B689BCB-B717-49A6-A273-606666CDF641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF3DCD9-C135-4EA2-A055-D080177744E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF3DCD9-C135-4EA2-A055-D080177744E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF3DCD9-C135-4EA2-A055-D080177744E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF3DCD9-C135-4EA2-A055-D080177744E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B0C21A-AC26-4B30-975C-A5720091A6F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B0C21A-AC26-4B30-975C-A5720091A6F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B0C21A-AC26-4B30-975C-A5720091A6F4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B0C21A-AC26-4B30-975C-A5720091A6F4}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

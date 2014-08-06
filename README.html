@@ -1,0 +1,38 @@
+<h1>CSharp.SourceMappings</h1>
+
+<p>C# classes for handling javascript Source Maps (.map files for in-browser javascript debugging)</p>
+
+<p>Copied and converted from "dart2js.dart" source code (Dart language SDK).</p>
+
+<h2>How to use the example</h2>
+
+<p>This example demostrates the use of map files over a fictional language "UPPECARSE-JAVASCRIPT"
+where the source files are made of Javascript written all upercase. </p>
+
+<p>The test program "compiles" (merges) <code>source1.txt</code> + <code>source2.txt</code> and produces <code>myapp.js</code> and <code>myapp.js.map</code> as result.</p>
+
+<p>To run the example:</p>
+
+<ul>
+<li>clone this repo</li>
+<li>open in visual studio</li>
+<li>run the <code>TestExample</code> project. This will create <code>myapp.js</code> and <code>myapp.js.map</code> files</li>
+<li>place some breakpoints in <code>source1.txt</code> or <code>source2.txt</code></li>
+<li>run the <code>Website</code> project in visual studio with IE browser</li>
+<li>see the debugging in action</li>
+</ul>
+
+<h2>Some notes on the working of Source maps</h2>
+
+<ul>
+<li>Source maps works better if the granularity is set at token level (punctuation included)</li>
+<li>If a coarse granularity is used, the highlight selection will span over, reaching the start of the next map</li>
+<li>A granularity at character level is possible too, e.g. mapping every single character, 
+this seem to work and to be handled ok by VS and the browsers</li>
+<li>If there are more map points than necessary, both browsers and VS will "intersect" them with
+legal points in the javascript code</li>
+<li>VS uses maps to make debugging at istruction level, while browser work at "start of line" level</li>
+<li>If there are two istructions on the same line, VS will handle it, browsers instead will consider just one breakpoint for the line</li>
+<li>The names specified in the maps are used only for callstack tracing, so only names for function calls should be specified</li>
+<li>Variable names are useless, Visual Studio doesn't recognize them (hovering the mouse over the variable name does not produce the tooltip)</li>
+</ul>

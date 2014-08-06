@@ -1,0 +1,12 @@
+﻿FUNCTION TEST()
+{
+    VAR B=0;
+    FOR(VAR T=1;T<10;T++)
+    {
+        B=B+T;   
+    }
+    //WINDOW.ALERT("finished");
+}
+
+TEST();
+
